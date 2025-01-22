@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegan Restaurant Finder</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌱 Vegan Restaurant Finder 🌱</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      
+    <form action="/search" method="GET">
+        <label for="location">Enter a location:</label>
+        <input type="text" id="location" name="location" placeholder="e.g., New York" required>
+    
+        <label for="rating">Minimum Rating:</label>
+        <select id="rating" name="rating">
+            <option value="">No Filter</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+        </select>
+    
+        <button type="submit">Search</button>
+    </form>
+    >
+    {{if .}}
+      <h2>Results:</h2>
+      <ul class="results">
+        {{range .}}
+          <li class="result">
+            <strong>{{.Name}}</strong><br>
+            <span>📍 {{.Address}}</span><br>
+            <span>⭐ Rating: {{.Rating}}</span>
+          </li>
+        {{end}}
+      </ul>
+    {{else}}
+      <p>No results yet! Try searching for a location.</p>
+    {{end}}
+  </div>
+</body>
+</html>

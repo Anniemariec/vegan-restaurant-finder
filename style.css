@@ -1,0 +1,143 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background-color: #fff; /* White background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full height of the viewport */
+    color: #333; /* Dark text */
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    background: #fff; /* White background */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content inside container */
+    align-items: center; /* Center form elements horizontally */
+}
+
+/* Header Styling */
+header {
+    background-color: #000; /* Black header */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Heading Icon Styling */
+h1::before,
+h1::after {
+    content: "🌱"; /* Green leaf icon */
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Limit form width */
+}
+
+/* Input and Textarea Styling */
+form input, form textarea {
+    width: 100%; /* Ensure full width inside form */
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #333; /* Dark border */
+    border-radius: 15px;
+    font-size: 1.1rem;
+    color: #333; /* Dark text inside input */
+    background-color: #fff; /* White background for inputs */
+}
+
+/* Ensure textarea has proper height */
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Button Styling */
+form button {
+    width: 100%; /* Full width button */
+    padding: 15px 30px;
+    background-color: #000; /* Black background for the button */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #333; /* Darker black on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Navigation Styling */
+nav {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Dark text */
+    margin: 0 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #000; /* Black hover effect */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Results Section Styling */
+.results {
+    list-style: none;
+    padding: 0;
+}
+
+.result {
+    background: rgba(0, 0, 0, 0.05); /* Subtle highlight for results */
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form input, form textarea, form button {
+        width: 100%; /* Make form elements responsive */
+        margin: 10px 0;
+    }
+}
